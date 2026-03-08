@@ -2,45 +2,48 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Работа в международной компании</title>
+<title>Вакансии в международной компании</title>
 
 <style>
 body {
   font-family: Arial, sans-serif;
-  background:#0f172a;
+  background: url('https://images.unsplash.com/photo-1581091215363-6a152f6b0d70?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+  background-size: cover;
   color:white;
   text-align:center;
   padding:40px;
-  transition: background 0.5s;
-}
-
-body:hover {
-  background:#111827;
 }
 
 .container {
   max-width:500px;
   margin:auto;
+  background: rgba(0,0,0,0.5);
+  padding:20px;
+  border-radius:15px;
 }
 
 h1 {
   margin-bottom:10px;
-  animation: fadeInDown 1s ease forwards;
+  opacity:0;
+  transform:translateY(-20px);
+  transition: all 0.8s ease;
 }
 
 .desc {
-  opacity:0.9;
-  margin-bottom:30px;
-  animation: fadeIn 1.2s ease forwards;
+  opacity:0;
+  transform:translateY(20px);
+  transition: all 0.8s ease;
 }
 
 .box {
-  background:#1e293b;
+  background: rgba(30,41,59,0.8);
   padding:20px;
   border-radius:15px;
   margin-bottom:20px;
   text-align:left;
-  animation: fadeIn 1.4s ease forwards;
+  opacity:0;
+  transform:translateY(20px);
+  transition: all 0.8s ease;
 }
 
 .box b {
@@ -49,22 +52,28 @@ h1 {
 }
 
 .button {
-  display:block;
-  background:#2563eb;
-  color:white;
-  padding:15px;
-  margin:10px 0;
-  border-radius:10px;
-  text-decoration:none;
-  font-size:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
   transition: all 0.3s ease;
   cursor:pointer;
 }
 
+.button i {
+  margin-right:10px;
+}
+
 .button:hover {
-  background:#1d4ed8;
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transform: scale(1.02);
 }
 
 input {
@@ -73,44 +82,51 @@ input {
   border:none;
   width:90%;
   margin-bottom:10px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, box-shadow 0.5s ease;
+  background:#111827;
+  color:white;
+}
+
+input::placeholder {
+  color:#9ca3af;
 }
 
 input:focus {
   outline:none;
-  box-shadow:0 0 10px #2563eb;
+  box-shadow:0 0 15px #2563eb;
+  background:#1f2937;
 }
 
 form button {
   width:95%;
 }
 
-@keyframes fadeIn {
-  from { opacity:0; transform:translateY(20px); }
-  to { opacity:1; transform:translateY(0); }
-}
-
-@keyframes fadeInDown {
-  from { opacity:0; transform:translateY(-20px); }
-  to { opacity:1; transform:translateY(0); }
+/* Класс для появления элементов */
+.show {
+  opacity:1 !important;
+  transform: translateY(0) !important;
 }
 </style>
+
+<!-- Подключаем Font Awesome для иконок -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>Работа в международной компании</h1>
+<h1 class="fade">Вакансии в международной компании</h1>
 
-<p class="desc">
+<p class="desc fade">
 Ищем сотрудников со знанием иностранных языков<br>
 💰 Высокая зарплата<br>
 ✈️ Перелёт и помощь с переездом оплачиваются<br>
 📍 Работа в Киеве | 18+
 </p>
 
-<div class="box">
+<div class="box fade">
 <b>Почему стоит откликнуться</b>
 ✔ высокая зарплата<br>
 ✔ оплачиваемый переезд<br>
@@ -119,23 +135,23 @@ form button {
 ✔ международная команда
 </div>
 
-<a class="button" href="https://t.me/xxt3rl1ov">💬 Написать в Telegram</a>
-<a class="button" href="tel:+380990549124">📱 Позвонить</a>
-<a class="button" href="https://t.me/xxt3rl1ov">📝 Узнать условия работы</a>
+<a class="button" href="https://t.me/xxt3rl1ov"><i class="fab fa-telegram"></i>💬 Написать в Telegram</a>
+<a class="button" href="tel:+380990549124"><i class="fas fa-phone"></i>📱 Позвонить</a>
+<a class="button" href="https://t.me/xxt3rl1ov"><i class="fas fa-info-circle"></i>📝 Узнать условия работы</a>
 
-<div class="box">
+<div class="box fade">
 <b>Оставьте свои контакты</b>
 <form action="https://formsubmit.co/ВАШ_EMAIL" method="POST">
   <input type="text" name="name" placeholder="Ваше имя" required><br>
   <input type="email" name="email" placeholder="Email" required><br>
-  <button type="submit" class="button">Отправить</button>
+  <button type="submit" class="button"><i class="fas fa-paper-plane"></i>Отправить</button>
 </form>
 </div>
 
 </div>
- 
+
 <script>
-// Функция для плавного появления блоков при скролле
+// Плавное появление блоков при скролле
 function scrollFade() {
   const faders = document.querySelectorAll('.fade');
   faders.forEach(fader => {
@@ -150,10 +166,9 @@ function scrollFade() {
 window.addEventListener('scroll', scrollFade);
 window.addEventListener('load', scrollFade);
 </script>
+
 </body>
 </html>
-
- 
 
 
 
