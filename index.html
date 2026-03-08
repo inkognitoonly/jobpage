@@ -1,4 +1,5 @@
 
+ 
  <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -134,9 +135,25 @@ form button {
 </div>
 
 </div>
+ 
+<script>
+// Функция для плавного появления блоков при скролле
+function scrollFade() {
+  const faders = document.querySelectorAll('.fade');
+  faders.forEach(fader => {
+    const top = fader.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if(top < windowHeight - 50) {
+      fader.classList.add('show');
+    }
+  });
+}
 
+window.addEventListener('scroll', scrollFade);
+window.addEventListener('load', scrollFade);
+</script>
 </body>
-</html> 
+</html>
 
 
 
