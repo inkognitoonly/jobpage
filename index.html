@@ -1,117 +1,186 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Вакансии в международной компании</title>
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: url("office.jpg.png") no-repeat center center fixed;
-  background-size: cover;
-  color:white;
-  text-align:center;
-  padding:40px;
+ <style>
+*{
+  box-sizing:border-box;
 }
 
-.container {
-  max-width:500px;
-  margin:auto;
-  background: rgba(0,0,0,0.5);
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:url("office.jpg.png") no-repeat center center fixed;
+  background-size:cover;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+.container{
+  width:100%;
+  max-width:520px;
+  margin:0 auto;
+  background:rgba(0,0,0,0.5);
   padding:20px;
   border-radius:15px;
 }
-
-h1 {
+h1{
   margin-bottom:10px;
   opacity:0;
   transform:translateY(-20px);
-  transition: all 0.8s ease;
+  transition:all 0.8s ease;
+  font-size:34px;
+  line-height:1.2;
 }
-
-.desc {
+.desc{
   opacity:0;
   transform:translateY(20px);
-  transition: all 0.8s ease;
+  transition:all 0.8s ease;
+  font-size:18px;
+  line-height:1.5;
 }
-
-.box {
-  background: rgba(30,41,59,0.8);
+.box{
+  background:rgba(30,41,59,0.8);
   padding:20px;
   border-radius:15px;
   margin-bottom:20px;
   text-align:left;
   opacity:0;
   transform:translateY(20px);
-  transition: all 0.8s ease;
+  transition:all 0.8s ease;
+  font-size:18px;
+  line-height:1.6;
 }
-
-.box b {
+.box b{
   display:block;
   margin-bottom:10px;
+  font-size:22px;
 }
-
-.button {
+.button{
   display:flex;
   align-items:center;
   justify-content:center;
-  background: rgba(255,255,255,0.1);
-  color: white;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: all 0.3s ease;
+  width:100%;
+  background:rgba(255,255,255,0.1);
+  color:white;
+  padding:15px;
+  margin:10px 0;
+  border-radius:10px;
+  text-decoration:none;
+  font-size:18px;
+  transition:all 0.3s ease;
   cursor:pointer;
 }
-
-.button i {
+.button i{
   margin-right:10px;
 }
-
-.button:hover {
-  background: rgba(255,255,255,0.2);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  transform: scale(1.02);
+.button:hover{
+  background:rgba(255,255,255,0.2);
+  box-shadow:0 4px 10px rgba(0,0,0,0.5);
+  transform:scale(1.02);
 }
-
-input {
-  padding:10px;
+input{
+  padding:12px;
   border-radius:5px;
   border:none;
-  width:90%;
+  width:100%;
   margin-bottom:10px;
-  transition: all 0.3s ease, box-shadow 0.5s ease;
+  transition:all 0.3s ease, box-shadow 0.5s ease;
   background:#111827;
   color:white;
+  font-size:16px;
 }
-
-input::placeholder {
+input::placeholder{
   color:#9ca3af;
 }
-
-input:focus {
+input:focus{
   outline:none;
   box-shadow:0 0 15px #2563eb;
   background:#1f2937;
 }
-
-form button {
-  width:95%;
+form button{
+  width:100%;
+  border:none;
 }
-
-/* Класс для появления элементов */
-.show {
+/* появление */
+.show{
   opacity:1 !important;
-  transform: translateY(0) !important;
+  transform:translateY(0) !important;
+}
+/* планшет */
+@media (max-width: 768px){
+  body{
+    padding:12px;
+    background:url("office.jpg.png") no-repeat center center;
+    background-size:cover;
+    background-attachment:scroll;
+  }
+.container{
+    max-width:100%;
+    padding:16px;
+  }
+ h1{
+    font-size:28px;
+  }
+ .desc{
+    font-size:16px;
+  }
+.box{
+    font-size:16px;
+    padding:16px;
+  }
+.box b{
+    font-size:19px;
+  }
+.button{
+    font-size:16px;
+    padding:14px;
+  }
+}
+/* телефон */
+@media (max-width: 480px){
+  body{
+    padding:10px;
+  }
+.container{
+    padding:14px;
+    border-radius:14px;
+  }
+  h1{
+    font-size:24px;
+  }
+
+  .desc{
+    font-size:15px;
+    line-height:1.4;
+  }
+
+  .box{
+    font-size:15px;
+    line-height:1.5;
+  }
+
+  .box b{
+    font-size:17px;
+  }
+
+  .button{
+    font-size:15px;
+    padding:13px;
+    border-radius:12px;
+  }
+
+  input{
+    font-size:15px;
+    padding:12px;
+  }
 }
 </style>
 
-<!-- Подключаем Font Awesome для иконок -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
 
 <body>
@@ -138,9 +207,7 @@ form button {
 
 <a class="button" href="https://t.me/xxt3rl1ov"><i class="fab fa-telegram"></i>💬 Написать в Telegram</a>
 <a class="button" href="tel:+380990549124"><i class="fas fa-phone"></i>📱 Позвонить</a>
- <a class="button" href="https://t.me/nn_frk_bot">
-🤖 Откликнуться через Telegram
-</a>
+<a class="button" href="https://t.me/nn_frk_bot">🤖 Откликнуться через Telegram</a>
 <a class="button" href="https://t.me/xxt3rl1ov"><i class="fas fa-info-circle"></i>📝 Узнать условия работы</a>
 
 <div class="box fade">
@@ -155,13 +222,12 @@ form button {
 </div>
 
 <script>
-// Плавное появление блоков при скролле
 function scrollFade() {
   const faders = document.querySelectorAll('.fade');
   faders.forEach(fader => {
     const top = fader.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
-    if(top < windowHeight - 50) {
+    if (top < windowHeight - 50) {
       fader.classList.add('show');
     }
   });
@@ -172,23 +238,4 @@ window.addEventListener('load', scrollFade);
 </script>
 
 </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html
