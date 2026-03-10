@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Вакансии в международной компании</title>
+<title>Работа в международной компании</title>
 
- <style>
+<style>
 *{
   box-sizing:border-box;
 }
@@ -19,6 +19,7 @@ body{
   text-align:center;
   padding:20px;
 }
+
 .container{
   width:100%;
   max-width:520px;
@@ -27,6 +28,7 @@ body{
   padding:20px;
   border-radius:15px;
 }
+
 h1{
   margin-bottom:10px;
   opacity:0;
@@ -35,13 +37,16 @@ h1{
   font-size:34px;
   line-height:1.2;
 }
+
 .desc{
   opacity:0;
   transform:translateY(20px);
   transition:all 0.8s ease;
   font-size:18px;
   line-height:1.5;
+  margin-bottom:20px;
 }
+
 .box{
   background:rgba(30,41,59,0.8);
   padding:20px;
@@ -54,11 +59,13 @@ h1{
   font-size:18px;
   line-height:1.6;
 }
+
 .box b{
   display:block;
   margin-bottom:10px;
   font-size:22px;
 }
+
 .button{
   display:flex;
   align-items:center;
@@ -74,42 +81,23 @@ h1{
   transition:all 0.3s ease;
   cursor:pointer;
 }
+
 .button i{
   margin-right:10px;
 }
+
 .button:hover{
   background:rgba(255,255,255,0.2);
   box-shadow:0 4px 10px rgba(0,0,0,0.5);
   transform:scale(1.02);
 }
-input{
-  padding:12px;
-  border-radius:5px;
-  border:none;
-  width:100%;
-  margin-bottom:10px;
-  transition:all 0.3s ease, box-shadow 0.5s ease;
-  background:#111827;
-  color:white;
-  font-size:16px;
-}
-input::placeholder{
-  color:#9ca3af;
-}
-input:focus{
-  outline:none;
-  box-shadow:0 0 15px #2563eb;
-  background:#1f2937;
-}
-form button{
-  width:100%;
-  border:none;
-}
+
 /* появление */
 .show{
   opacity:1 !important;
   transform:translateY(0) !important;
 }
+
 /* планшет */
 @media (max-width: 768px){
   body{
@@ -118,37 +106,46 @@ form button{
     background-size:cover;
     background-attachment:scroll;
   }
-.container{
+
+  .container{
     max-width:100%;
     padding:16px;
   }
- h1{
+
+  h1{
     font-size:28px;
   }
- .desc{
+
+  .desc{
     font-size:16px;
   }
-.box{
+
+  .box{
     font-size:16px;
     padding:16px;
   }
-.box b{
+
+  .box b{
     font-size:19px;
   }
-.button{
+
+  .button{
     font-size:16px;
     padding:14px;
   }
 }
+
 /* телефон */
 @media (max-width: 480px){
   body{
     padding:10px;
   }
-.container{
+
+  .container{
     padding:14px;
     border-radius:14px;
   }
+
   h1{
     font-size:24px;
   }
@@ -172,11 +169,6 @@ form button{
     padding:13px;
     border-radius:12px;
   }
-
-  input{
-    font-size:15px;
-    padding:12px;
-  }
 }
 </style>
 
@@ -187,37 +179,43 @@ form button{
 
 <div class="container">
 
-<h1 class="fade">Вакансии в международной компании</h1>
+<h1 class="fade">Работа в международной компании</h1>
 
 <p class="desc fade">
-Ищем сотрудников со знанием иностранных языков<br>
-💰 Высокая зарплата<br>
-✈️ Перелёт и помощь с переездом оплачиваются<br>
-📍 Работа в Киеве | 18+
+Открыт набор сотрудников со знанием иностранных языков<br>
+📍 Работа в Киеве | 18+<br>
+💰 Высокий доход<br>
+✈️ Перелёт и помощь с переездом оплачиваются
 </p>
 
 <div class="box fade">
-<b>Почему стоит откликнуться</b>
-✔ высокая зарплата<br>
+<b>Требования</b>
+✔ возраст 18+<br>
+✔ знание иностранных языков<br>
+✔ ответственность и коммуникабельность<br>
+✔ готовность обучаться и работать в команде
+</div>
+
+<div class="box fade">
+<b>Что предлагаем</b>
+✔ высокий доход<br>
 ✔ оплачиваемый переезд<br>
-✔ обучение<br>
+✔ обучение и поддержку на старте<br>
 ✔ современный офис<br>
-✔ международная команда
+✔ работу в международной команде
+</div>
+
+<div class="box fade">
+<b>Обязанности</b>
+✔ общение и работа с людьми<br>
+✔ выполнение рабочих задач компании<br>
+✔ работа в офисе в команде специалистов
 </div>
 
 <a class="button" href="https://t.me/xxt3rl1ov"><i class="fab fa-telegram"></i>💬 Написать в Telegram</a>
 <a class="button" href="tel:+380990549124"><i class="fas fa-phone"></i>📱 Позвонить</a>
-<a class="button" href="https://t.me/nn_frk_bot">🤖 Откликнуться через Telegram</a>
+<a class="button" href="https://t.me/nn_frk_bot"><i class="fas fa-robot"></i>🤖 Откликнуться через Telegram</a>
 <a class="button" href="https://t.me/xxt3rl1ov"><i class="fas fa-info-circle"></i>📝 Узнать условия работы</a>
-
-<div class="box fade">
-<b>Оставьте свои контакты</b>
-<form action="https://formsubmit.co/ВАШ_EMAIL" method="POST">
-  <input type="text" name="name" placeholder="Ваше имя" required><br>
-  <input type="email" name="email" placeholder="Email" required><br>
-  <button type="submit" class="button"><i class="fas fa-paper-plane"></i>Отправить</button>
-</form>
-</div>
 
 </div>
 
@@ -238,5 +236,6 @@ window.addEventListener('load', scrollFade);
 </script>
 
 </body>
-</html
+</html>
+
 
