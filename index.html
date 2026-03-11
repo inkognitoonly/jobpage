@@ -24,13 +24,16 @@ body{
   width:100%;
   max-width:520px;
   margin:0 auto;
-  background:rgba(0,0,0,0.5);
-  padding:20px;
-  border-radius:15px;
+  background:rgba(0,0,0,0.58);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+  padding:22px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.45);
 }
 
 h1{
-  margin-bottom:10px;
+  margin:0 0 12px;
   opacity:0;
   transform:translateY(-20px);
   transition:all 0.8s ease;
@@ -43,27 +46,31 @@ h1{
   transform:translateY(20px);
   transition:all 0.8s ease;
   font-size:18px;
-  line-height:1.5;
-  margin-bottom:20px;
+  line-height:1.6;
+  margin-bottom:22px;
+  color:#f3f4f6;
 }
 
 .box{
-  background:rgba(30,41,59,0.8);
-  padding:20px;
-  border-radius:15px;
-  margin-bottom:20px;
+  background:rgba(15,23,42,0.82);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:18px;
+  border-radius:16px;
+  margin-bottom:16px;
   text-align:left;
   opacity:0;
   transform:translateY(20px);
   transition:all 0.8s ease;
-  font-size:18px;
-  line-height:1.6;
+  font-size:17px;
+  line-height:1.65;
+  box-shadow:0 6px 18px rgba(0,0,0,0.25);
 }
 
 .box b{
   display:block;
   margin-bottom:10px;
-  font-size:22px;
+  font-size:21px;
+  color:#ffffff;
 }
 
 .button{
@@ -75,11 +82,13 @@ h1{
   color:white;
   padding:15px;
   margin:10px 0;
-  border-radius:10px;
+  border-radius:12px;
   text-decoration:none;
-  font-size:18px;
+  font-size:17px;
+  font-weight:600;
   transition:all 0.3s ease;
   cursor:pointer;
+  border:1px solid rgba(255,255,255,0.08);
 }
 
 .button i{
@@ -87,9 +96,32 @@ h1{
 }
 
 .button:hover{
-  background:rgba(255,255,255,0.2);
-  box-shadow:0 4px 10px rgba(0,0,0,0.5);
+  background:rgba(255,255,255,0.18);
+  box-shadow:0 4px 10px rgba(0,0,0,0.45);
   transform:scale(1.02);
+}
+
+.button-main{
+  background:linear-gradient(135deg, #2563eb, #1d4ed8);
+  border:none;
+  font-size:18px;
+  padding:17px;
+  box-shadow:0 8px 20px rgba(37,99,235,0.35);
+}
+
+.button-main:hover{
+  background:linear-gradient(135deg, #3b82f6, #2563eb);
+  box-shadow:0 10px 24px rgba(37,99,235,0.45);
+}
+
+.note{
+  opacity:0;
+  transform:translateY(20px);
+  transition:all 0.8s ease;
+  font-size:14px;
+  line-height:1.5;
+  color:#d1d5db;
+  margin-top:8px;
 }
 
 /* появление */
@@ -109,7 +141,7 @@ h1{
 
   .container{
     max-width:100%;
-    padding:16px;
+    padding:18px;
   }
 
   h1{
@@ -133,6 +165,11 @@ h1{
     font-size:16px;
     padding:14px;
   }
+
+  .button-main{
+    font-size:17px;
+    padding:15px;
+  }
 }
 
 /* телефон */
@@ -152,12 +189,13 @@ h1{
 
   .desc{
     font-size:15px;
-    line-height:1.4;
+    line-height:1.45;
   }
 
   .box{
     font-size:15px;
-    line-height:1.5;
+    line-height:1.55;
+    border-radius:14px;
   }
 
   .box b{
@@ -169,6 +207,15 @@ h1{
     padding:13px;
     border-radius:12px;
   }
+
+  .button-main{
+    font-size:16px;
+    padding:14px;
+  }
+
+  .note{
+    font-size:13px;
+  }
 }
 </style>
 
@@ -179,43 +226,54 @@ h1{
 
 <div class="container">
 
-<h1 class="fade">Работа в международной компании</h1>
+  <h1 class="fade">Работа в международной компании</h1>
 
-<p class="desc fade">
-Открыт набор сотрудников со знанием иностранных языков<br>
-📍 Работа в Киеве | 18+<br>
-💰 Высокий доход<br>
-✈️ Перелёт и помощь с переездом оплачиваются
-</p>
+  <p class="desc fade">
+    Открыт набор сотрудников со знанием иностранных языков.<br>
+    💰 Высокий доход<br>
+    ✈️ Перелёт и помощь с переездом оплачиваются<br>
+    📍 Работа в Киеве | 18+
+  </p>
 
-<div class="box fade">
-<b>Требования</b>
-✔ возраст 18+<br>
-✔ знание иностранных языков<br>
-✔ ответственность и коммуникабельность<br>
-✔ готовность обучаться и работать в команде
-</div>
+  <div class="box fade">
+    <b>Требования</b>
+    ✔ возраст от 18 лет<br>
+    ✔ знание одного или нескольких иностранных языков<br>
+    ✔ ответственность и умение общаться с людьми<br>
+    ✔ желание работать и обучаться
+  </div>
 
-<div class="box fade">
-<b>Что предлагаем</b>
-✔ высокий доход<br>
-✔ оплачиваемый переезд<br>
-✔ обучение и поддержку на старте<br>
-✔ современный офис<br>
-✔ работу в международной команде
-</div>
+  <div class="box fade">
+    <b>Что предлагаем</b>
+    ✔ высокий доход<br>
+    ✔ оплачиваемый переезд и поддержку при адаптации<br>
+    ✔ обучение на старте<br>
+    ✔ комфортный современный офис<br>
+    ✔ работу в международной команде
+  </div>
 
-<div class="box fade">
-<b>Обязанности</b>
-✔ общение и работа с людьми<br>
-✔ выполнение рабочих задач компании<br>
-✔ работа в офисе в команде специалистов
-</div>
+  <div class="box fade">
+    <b>Обязанности</b>
+    ✔ общение и взаимодействие с людьми<br>
+    ✔ выполнение рабочих задач компании<br>
+    ✔ работа в команде и по внутренним инструкциям
+  </div>
 
-<a class="button" href="https://t.me/xxt3rl1ov"><i class="fab fa-telegram"></i>💬 Написать в Telegram</a>
-<a class="button" href="tel:+380990549124"><i class="fas fa-phone"></i>📱 Позвонить</a>
-<a class="button" href="https://t.me/nn_frk_bot"><i class="fas fa-robot"></i>🤖 Откликнуться через Telegram</a>
-<a class="button" href="https://t.me/xxt3rl1ov"><i class="fas fa-info-circle"></i>📝 Узнать условия работы</a>
+  <a class="button button-main fade" href="https://t.me/nn_frk_bot">
+    <i class="fas fa-robot"></i>Откликнуться через Telegram
+  </a>
+
+  <a class="button fade" href="https://t.me/xxt3rl1ov">
+    <i class="fab fa-telegram"></i>Написать в Telegram
+  </a>
+
+  <a class="button fade" href="tel:+380990549124">
+    <i class="fas fa-phone"></i>Позвонить
+  </a>
+
+  <p class="note fade">
+    Заполнение анкеты занимает всего пару минут. После отправки анкеты с вами свяжутся в Telegram.
+  </p>
 
 </div>
 
@@ -237,7 +295,3 @@ window.addEventListener('load', scrollFade);
 
 </body>
 </html>
-
-
-
-
