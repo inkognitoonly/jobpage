@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -9,155 +7,152 @@
 
 <style>
 *{
-  box-sizing:border-box;
+box-sizing:border-box;
 }
 
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:url("office.jpg.png") no-repeat center center fixed;
-  background-size:cover;
-  color:white;
-  text-align:center;
-  padding:20px;
+margin:0;
+font-family:Arial,sans-serif;
+background:url("office.jpg.png") no-repeat center center fixed;
+background-size:cover;
+color:white;
+text-align:center;
+padding:20px;
 }
 
 .container{
-  width:100%;
-  max-width:520px;
-  margin:0 auto;
-  background:rgba(0,0,0,0.58);
-  backdrop-filter:blur(4px);
-  padding:22px;
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.45);
+width:100%;
+max-width:520px;
+margin:0 auto;
+background:rgba(0,0,0,0.58);
+backdrop-filter:blur(4px);
+padding:22px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.45);
 }
 
 h1{
-  margin:0 0 12px;
-  opacity:0;
-  transform:translateY(-20px);
-  transition:all 0.8s ease;
-  font-size:34px;
-  line-height:1.2;
+margin:0 0 12px;
+opacity:0;
+transform:translateY(-20px);
+transition:all 0.8s ease;
+font-size:34px;
+line-height:1.2;
 }
 
 .desc{
-  opacity:0;
-  transform:translateY(20px);
-  transition:all 0.8s ease;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:22px;
+opacity:0;
+transform:translateY(20px);
+transition:all 0.8s ease;
+font-size:18px;
+line-height:1.6;
+margin-bottom:22px;
 }
 
 .box{
-  background:rgba(15,23,42,0.82);
-  border:1px solid rgba(255,255,255,0.08);
-  padding:18px;
-  border-radius:16px;
-  margin-bottom:16px;
-  text-align:left;
-  opacity:0;
-  transform:translateY(20px);
-  transition:all 0.8s ease;
-  font-size:17px;
-  line-height:1.65;
+background:rgba(15,23,42,0.82);
+border:1px solid rgba(255,255,255,0.08);
+padding:18px;
+border-radius:16px;
+margin-bottom:16px;
+text-align:left;
+opacity:0;
+transform:translateY(20px);
+transition:all 0.8s ease;
+font-size:17px;
+line-height:1.65;
 }
 
 .box b{
-  display:block;
-  margin-bottom:10px;
-  font-size:21px;
+display:block;
+margin-bottom:10px;
+font-size:21px;
 }
 
 .button{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:100%;
-  background:rgba(255,255,255,0.1);
-  color:white;
-  padding:15px;
-  margin:10px 0;
-  border-radius:12px;
-  text-decoration:none;
-  font-size:17px;
-  font-weight:600;
-  transition:all 0.3s ease;
-  border:1px solid rgba(255,255,255,0.08);
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+background:rgba(255,255,255,0.1);
+color:white;
+padding:15px;
+margin:10px 0;
+border-radius:12px;
+text-decoration:none;
+font-size:17px;
+font-weight:600;
+transition:all 0.3s ease;
+border:1px solid rgba(255,255,255,0.08);
 }
 
 .button i{
-  margin-right:10px;
+margin-right:10px;
 }
 
 .button:hover{
-  background:rgba(255,255,255,0.18);
-  transform:scale(1.02);
+background:rgba(255,255,255,0.18);
+transform:scale(1.02);
 }
 
 .button-main{
-  background:linear-gradient(135deg,#2563eb,#1d4ed8);
-  border:none;
-  font-size:18px;
-  padding:17px;
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
+border:none;
+font-size:18px;
+padding:17px;
 }
 
 .note{
-  opacity:0;
-  transform:translateY(20px);
-  transition:all 0.8s ease;
-  font-size:14px;
-  line-height:1.5;
-  margin-top:8px;
+opacity:0;
+transform:translateY(20px);
+transition:all 0.8s ease;
+font-size:14px;
+line-height:1.5;
+margin-top:8px;
 }
 
-/* анимация */
 .show{
-  opacity:1 !important;
-  transform:translateY(0) !important;
+opacity:1 !important;
+transform:translateY(0) !important;
 }
 
-/* планшет */
 @media (max-width:768px){
 
 .container{
-  max-width:100%;
+max-width:100%;
 }
 
 h1{
-  font-size:28px;
+font-size:28px;
 }
 
 .desc{
-  font-size:16px;
+font-size:16px;
 }
 
 .box{
-  font-size:16px;
+font-size:16px;
 }
 
 }
 
-/* телефон */
 @media (max-width:480px){
 
 h1{
-  font-size:24px;
+font-size:24px;
 }
 
 .desc{
-  font-size:15px;
+font-size:15px;
 }
 
 .box{
-  font-size:15px;
+font-size:15px;
 }
 
 .button{
-  font-size:15px;
-  padding:13px;
+font-size:15px;
+padding:13px;
 }
 
 }
@@ -204,11 +199,11 @@ h1{
 </div>
 
 <a class="button button-main fade" href="https://t.me/nn_frk_bot">
-<i class="fas fa-robot"></i>Заполнить анкету через бота
+<i class="fas fa-robot"></i>Для быстрого отклика заполните анкету через бота
 </a>
 
 <a class="button fade" href="https://t.me/xxt3rl1ov">
-<i class="fab fa-telegram"></i>Связаться лично
+<i class="fab fa-telegram"></i>Можно связаться лично в Telegram
 </a>
 
 <a class="button fade" href="tel:+380990549124">
@@ -216,7 +211,7 @@ h1{
 </a>
 
 <p class="note fade">
-Для быстрого отклика заполните анкету через бота. Если остались вопросы — можно связаться лично.
+Для быстрого отклика заполните анкету через бота. Если у вас есть вопросы — можно связаться лично в Telegram.
 </p>
 
 </div>
